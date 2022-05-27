@@ -1,6 +1,6 @@
 package lab_03;
 
-public class lab33AscendSorting {
+public class Lab_3_3_Ascend_Sortation {
 
     public static void main(String[] args) {
 
