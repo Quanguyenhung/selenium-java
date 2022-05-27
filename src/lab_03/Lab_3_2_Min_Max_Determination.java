@@ -1,6 +1,6 @@
 package lab_03;
 
-public class Lab_3_2_Min_Max_Finding {
+public class Lab_3_2_Min_Max_Determination {
 
     public static void main(String[] args) {
 
