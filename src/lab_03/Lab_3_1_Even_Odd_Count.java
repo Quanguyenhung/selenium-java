@@ -1,6 +1,6 @@
 package lab_03;
 
-public class Lab31_Even_Odd_Count {
+public class Lab_3_1_Even_Odd_Count {
     public static void main(String[] args) {
 
         int[] myArr31 = {1, 2, 3, 4, 5};
