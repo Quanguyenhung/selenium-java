@@ -2,7 +2,7 @@ package lab_02;
 
 import java.util.Scanner;
 
-public class lab22EvenOddDetermination {
+public class Lab22_Even_Odd_Determination {
 
     public static void main(String[] args) {
 
