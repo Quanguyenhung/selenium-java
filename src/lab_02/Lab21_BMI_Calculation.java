@@ -2,7 +2,7 @@ package lab_02;
 
 import java.util.Scanner;
 
-public class lab21BMICalculation {
+public class Lab21_BMI_Calculation {
     public static void main(String[] args) {
 
         float changeWeight;
