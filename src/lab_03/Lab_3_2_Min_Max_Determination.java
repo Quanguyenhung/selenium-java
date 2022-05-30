@@ -12,11 +12,9 @@ public class Lab_3_2_Min_Max_Determination {
             if (minValue > myArr32[index]){
                 minValue = myArr32[index];
             }
-
             if (maxValue < myArr32[index]){
                 maxValue = myArr32[index];
             }
-
         }
 
         if (maxValue == minValue){

@@ -16,6 +16,7 @@ public class Lab_3_1_Even_Odd_Count {
         System.out.println("Even numbers: " + evenNumCounts);
         System.out.println("Odd numbers: " + oddNumCounts);
 
+
     }
 
 }
