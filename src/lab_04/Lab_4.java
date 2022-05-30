@@ -123,9 +123,9 @@ public class Lab_4 {
                     }
                     isContinue = true;
 
-                case 7:
+                case 7: //exit
                     while (isContinue){
-                        System.out.println("Do you want to reset array list?");
+                        System.out.println("Do you want to exit?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
                         int reset = getUserInput();
