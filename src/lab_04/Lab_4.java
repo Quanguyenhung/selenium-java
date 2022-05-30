@@ -122,6 +122,8 @@ public class Lab_4 {
                         }
                     }
                     isContinue = true;
+                    createMenu();
+                    break;
 
                 case 7: //exit
                     while (isContinue){

@@ -20,6 +20,7 @@ public class Lab_4_1 {
             userOption = getUserNumber();
 
             switch (userOption) {
+
                 case 1: //add numbers into array list
                     System.out.print("Please add a number and your array list will be automatically created: ");
                     int userNumber = getUserNumber();
@@ -45,30 +46,49 @@ public class Lab_4_1 {
                         createMenu();
                         break;
                     }
-                    int maxValue = userList.get(0);
-                    for (int index = 0; index < userList.size(); index++) {
-                        maxValue = userList.get(index);
-                        if (maxValue < userList.get(index)) {
-                            maxValue = userList.get(index);
-                        }
-                    }
+
+//                    int maxValue = userList.get(0);
+//                    for (Integer number : userList) {
+//                        if (maxValue < number){
+//                            maxValue = number;
+//                        }
+//                    }
+
+//                    for (int index = 0; index < userList.size(); index++) {
+//                        maxValue = userList.get(index);
+//                        if (maxValue < userList.get(index)) {
+//                            maxValue = userList.get(index);
+//                        }
+//                    }
+
+                    int maxValue = getMax(userList);
                     System.out.printf("Maximum value is %d.\n", maxValue);
                     createMenu();
                     break;
 
                 case 4: //get min
+
                     if (userList.size() == 0){
                         System.out.println("Please add numbers to your array list!");
                         createMenu();
                         break;
                     }
-                    int minValue = 0;
-                    for (int index = 0; index < userList.size(); index++) {
-                        minValue = userList.get(0);
-                        if (minValue > userList.get(index)) {
-                            minValue = userList.get(index);
-                        }
-                    }
+
+//                    int minValue = userList.get(0);
+//                    for (Integer number : userList) {
+//                        if (minValue > number){
+//                            minValue = number;
+//                        }
+//                    }
+
+//                    for (int index = 0; index < userList.size(); index++) {
+//                        minValue = userList.get(0);
+//                        if (minValue > userList.get(index)) {
+//                            minValue = userList.get(index);
+//                        }
+//                    }
+
+                    int minValue = getMin(userList);
                     System.out.printf("Minimum value is %d.\n", minValue);
                     createMenu();
                     break;
@@ -160,6 +180,26 @@ public class Lab_4_1 {
 //                    }
             }
         }
+    }
+
+    private static int getMax(List<Integer> userList) {
+        int maxValue = userList.get(0);
+        for (Integer number : userList) {
+            if (maxValue < number){
+                maxValue = number;
+            }
+        }
+        return maxValue;
+    }
+
+    private static int getMin(List<Integer> userList) {
+        int minValue = userList.get(0);
+        for (Integer number : userList) {
+            if (minValue > number){
+                minValue = number;
+            }
+        }
+        return minValue;
     }
 
     private static void createMenu() {
