@@ -1,6 +1,8 @@
 package lab_03;
 
-public class Lab_3_3_Ascend_Sortation {
+import java.util.Arrays;
+
+public class Lab_3_3_Ascend_Sort {
 
     public static void main(String[] args) {
 
@@ -16,11 +18,13 @@ public class Lab_3_3_Ascend_Sortation {
             }
         }
 
-        System.out.print("Ascending sorted array: {");
-        for (int i1 = 0; i1 < myArr33.length; i1++) {
-            System.out.print(" " + myArr33[i1]);
-        }
-        System.out.print(" }");
+        System.out.println("Ascending sorted array: " + Arrays.toString(myArr33));
+
+//        System.out.print("Ascending sorted array: {");
+//        for (int i1 = 0; i1 < myArr33.length; i1++) {
+//            System.out.print(" " + myArr33[i1]);
+//        }
+//        System.out.print(" }");
 
     }
 }
