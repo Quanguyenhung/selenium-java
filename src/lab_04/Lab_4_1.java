@@ -47,20 +47,6 @@ public class Lab_4_1 {
                         break;
                     }
 
-//                    int maxValue = userList.get(0);
-//                    for (Integer number : userList) {
-//                        if (maxValue < number){
-//                            maxValue = number;
-//                        }
-//                    }
-
-//                    for (int index = 0; index < userList.size(); index++) {
-//                        maxValue = userList.get(index);
-//                        if (maxValue < userList.get(index)) {
-//                            maxValue = userList.get(index);
-//                        }
-//                    }
-
                     int maxValue = getMax(userList);
                     System.out.printf("Maximum value is %d.\n", maxValue);
                     createMenu();
@@ -73,20 +59,6 @@ public class Lab_4_1 {
                         createMenu();
                         break;
                     }
-
-//                    int minValue = userList.get(0);
-//                    for (Integer number : userList) {
-//                        if (minValue > number){
-//                            minValue = number;
-//                        }
-//                    }
-
-//                    for (int index = 0; index < userList.size(); index++) {
-//                        minValue = userList.get(0);
-//                        if (minValue > userList.get(index)) {
-//                            minValue = userList.get(index);
-//                        }
-//                    }
 
                     int minValue = getMin(userList);
                     System.out.printf("Minimum value is %d.\n", minValue);
@@ -115,6 +87,7 @@ public class Lab_4_1 {
 
                     createMenu();
                     break;
+
                 case 6: //reset
 
                     while (isContinue){
@@ -174,10 +147,7 @@ public class Lab_4_1 {
                         System.out.println("Please choose again!");
                         createMenu();
                     }
-//                    else {
-//                        System.out.println("There is nothing in your list.");
-//                        System.out.println("Please add numbers into your array list or exit.");
-//                    }
+
             }
         }
     }
