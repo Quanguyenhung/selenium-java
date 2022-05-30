@@ -17,12 +17,12 @@ public class Lab_4_1 {
 
         while (userOption != 7) {
             System.out.print("Please choose an option: ");
-            userOption = getUserInput();
+            userOption = getUserNumber();
 
             switch (userOption) {
                 case 1: //add numbers into array list
                     System.out.print("Please add a number and your array list will be automatically created: ");
-                    int userNumber = getUserInput();
+                    int userNumber = getUserNumber();
                     userList.add(userNumber);
                     for (int index = 0; index < userListSize; index++) {
                         userList.add(userNumber + index + 1);
@@ -80,7 +80,7 @@ public class Lab_4_1 {
                         break;
                     }
                     System.out.print("Please input the number you want to find: ");
-                    int userFindNumber = getUserInput();
+                    int userFindNumber = getUserNumber();
                     int isInArray = 0;
 
                     for (int index = 0; index < userList.size(); index++) {
@@ -101,7 +101,7 @@ public class Lab_4_1 {
                         System.out.println("Do you want to reset array list?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
-                        int reset = getUserInput();
+                        int reset = getUserNumber();
 
                         switch (reset){
                             case 1:
@@ -122,13 +122,15 @@ public class Lab_4_1 {
                         }
                     }
                     isContinue = true;
+                    createMenu();
+                    break;
 
                 case 7: //exit
                     while (isContinue){
                         System.out.println("Do you want to exit?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
-                        int reset = getUserInput();
+                        int reset = getUserNumber();
 
                         switch (reset){
                             case 1:
@@ -172,9 +174,10 @@ public class Lab_4_1 {
         System.out.println("7. Exit");
     }
 
-    private static int getUserInput() {
-        Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
+    private static int getUserNumber() {
+
+            Scanner scanner = new Scanner(System.in);
+            int userInput = scanner.nextInt();
         return userInput;
     }
 }
