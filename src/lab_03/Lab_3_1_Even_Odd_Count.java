@@ -10,7 +10,7 @@ public class Lab_3_1_Even_Odd_Count {
         for (int index = 0; index < myArr31.length; index++) {
             if (myArr31[index] % 2 == 0){
                 evenNumCounts = evenNumCounts + 1;
-            } else oddNumCounts = oddNumCounts + 2;
+            } else oddNumCounts = oddNumCounts + 1;
         }
 
         System.out.println("Even numbers: " + evenNumCounts);
