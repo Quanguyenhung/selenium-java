@@ -13,7 +13,6 @@ public class Lab_6_4_StringChecking {
             System.out.println("This url does not contain http or https.");
         }
 
-
         if (url.contains(".com")) {
             System.out.println("This url domain is .com");
         } else if (url.contains(".net")) {
