@@ -41,12 +41,11 @@ public class Lab_4_1 {
                     break;
 
                 case 3: //get max
-                    if (userList.size() == 0){
+                    if (userList.isEmpty()) {
                         System.out.println("Please add numbers to your array list!");
                         createMenu();
                         break;
                     }
-
                     int maxValue = getMax(userList);
                     System.out.printf("Maximum value is %d.\n", maxValue);
                     createMenu();
@@ -54,49 +53,48 @@ public class Lab_4_1 {
 
                 case 4: //get min
 
-                    if (userList.size() == 0){
+                    if (userList.size() == 0) {
                         System.out.println("Please add numbers to your array list!");
                         createMenu();
                         break;
                     }
-
                     int minValue = getMin(userList);
                     System.out.printf("Minimum value is %d.\n", minValue);
                     createMenu();
                     break;
 
                 case 5: //search number index
-                    if (userList.size() == 0){
+                    if (userList.size() == 0) {
                         System.out.println("Please add numbers to your array list!");
                         createMenu();
                         break;
                     }
                     System.out.print("Please input the number you want to find: ");
                     int userFindNumber = getUserNumber();
-                    int isInArray = 0;
+                    boolean isInList = userList.contains(userFindNumber);
 
-                    for (int index = 0; index < userList.size(); index++) {
-                        if (userFindNumber == userList.get(index)) {
-                            System.out.printf("The index of %d is %d.\n", userFindNumber, index);
-                            isInArray = index + 1;
+                    if (!isInList) {
+                        System.out.printf("%d is not in your array list.\n", userFindNumber);
+                        isInList = true;
+                    } else {
+                        for (int index = 0; index < userList.size(); index++) {
+                            if (userFindNumber == userList.get(index)) {
+                                System.out.printf("The index of %d is %d.\n", userFindNumber, index);
+                            }
                         }
                     }
-                    if (isInArray == 0) {
-                        System.out.printf("%d is not in your array list.\n", userFindNumber);
-                    }
-
                     createMenu();
                     break;
 
                 case 6: //reset
 
-                    while (isContinue){
+                    while (isContinue) {
                         System.out.println("Do you want to reset array list?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
                         int reset = getUserNumber();
 
-                        switch (reset){
+                        switch (reset) {
                             case 1:
                                 System.out.println("Your array list was reset.");
                                 isContinue = false;
@@ -119,13 +117,13 @@ public class Lab_4_1 {
                     break;
 
                 case 7: //exit
-                    while (isContinue){
+                    while (isContinue) {
                         System.out.println("Do you want to exit?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
                         int reset = getUserNumber();
 
-                        switch (reset){
+                        switch (reset) {
                             case 1:
                                 System.out.println("See you again!");
                                 isContinue = false;
@@ -155,7 +153,7 @@ public class Lab_4_1 {
     private static int getMax(List<Integer> userList) {
         int maxValue = userList.get(0);
         for (Integer number : userList) {
-            if (maxValue < number){
+            if (maxValue < number) {
                 maxValue = number;
             }
         }
@@ -165,7 +163,7 @@ public class Lab_4_1 {
     private static int getMin(List<Integer> userList) {
         int minValue = userList.get(0);
         for (Integer number : userList) {
-            if (minValue > number){
+            if (minValue > number) {
                 minValue = number;
             }
         }
@@ -186,8 +184,8 @@ public class Lab_4_1 {
 
     private static int getUserNumber() {
 
-            Scanner scanner = new Scanner(System.in);
-            int userInput = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
         return userInput;
     }
 }
