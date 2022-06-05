@@ -4,8 +4,8 @@ public class Lab_6_4_StringChecking {
 
     public static void main(String[] args) {
 
-        String url = "httpsk://google.com";
-        stringCheck(url, "http", "https");
+        String url = "https://google.com";
+        stringCheck(url, "https", "http");
         stringCheck(url, ".com", ".net");
     }
 
