@@ -16,8 +16,9 @@ public class Lab_6_3_NumbersExtraction {
             }
         }
 
-        // Cach 2
         System.out.println();
+
+        // Cach 2
         for (char character : myStr.toCharArray()) {
             if (Character.isDigit(character)){
                 System.out.print(character);

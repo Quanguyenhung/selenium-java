@@ -3,22 +3,26 @@ package lab_06;
 public class Lab_6_4_StringChecking {
 
     public static void main(String[] args) {
-        String url = "http://google.vn";
 
-        if (url.contains("https")) {
-            System.out.println("This url contains https.");
-        } else if (url.contains("http")) {
-            System.out.println("This url contains http.");
-        } else {
-            System.out.println("This url does not contain http or https.");
+        String url = "httpsk://google.com";
+        stringCheck(url, "http", "https");
+        stringCheck(url, ".com", ".net");
+    }
+
+    private static void stringCheck(String checkString, String checkValue1, String checkValue2) {
+
+        String checkValue3 = checkValue1;
+        if (checkValue1.length() < checkValue2.length()){
+            checkValue1 = checkValue2;
+            checkValue2 = checkValue3;
         }
 
-        if (url.contains(".com")) {
-            System.out.println("This url domain is .com");
-        } else if (url.contains(".net")) {
-            System.out.println("This url domain is .net");
+        if (checkString.contains(checkValue1)) {
+            System.out.printf("This url contains %s.\n", checkValue1);
+        } else if (checkString.contains(checkValue2)){
+            System.out.printf("This url contains %s.\n", checkValue2);
         } else {
-            System.out.println("This url domain is neither .com nor .net.");
+            System.out.printf("This url does not contain %s or %s.\n", checkValue1, checkValue2);
         }
     }
 }

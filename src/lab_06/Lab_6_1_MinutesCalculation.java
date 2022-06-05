@@ -1,7 +1,5 @@
 package lab_06;
 
-import java.util.Arrays;
-
 public class Lab_6_1_MinutesCalculation {
 
     public static void main(String[] args) {
@@ -17,6 +15,5 @@ public class Lab_6_1_MinutesCalculation {
         int totalMinutes = givenMinutes + givenHrs * 60;
 
         System.out.println("There are " + totalMinutes + " Minutes.");
-
     }
 }
