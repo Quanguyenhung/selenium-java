@@ -2,7 +2,7 @@ package lab_03;
 
 import java.util.Arrays;
 
-public class Lab_3_3_Ascend_Sort {
+public class Lab_3_3_AscendingSort {
 
     public static void main(String[] args) {
 

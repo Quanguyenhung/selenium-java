@@ -1,6 +1,6 @@
 package lab_03;
 
-public class Lab_3_4_Merge_Sort_Arrays {
+public class Lab_3_4_MergeSortArrays {
 
     public static void main(String[] args) {
 

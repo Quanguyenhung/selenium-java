@@ -9,7 +9,6 @@ public class ArrayPostfixPrefix {
 
         for (int index = 0; index < arrLength; ) {
             myIntArr[index++] = index;
-
         }
 
         for (int index = 0; index < arrLength; index++) {

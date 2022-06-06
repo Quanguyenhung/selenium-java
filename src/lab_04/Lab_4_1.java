@@ -36,7 +36,7 @@ public class Lab_4_1 {
                     for (Integer userNumbers : userList) {
                         System.out.print(" " + userNumbers);
                     }
-                    System.out.println("");
+                    System.out.println();
                     createMenu();
                     break;
 
@@ -75,14 +75,15 @@ public class Lab_4_1 {
 
                     if (!isInList) {
                         System.out.printf("%d is not in your array list.\n", userFindNumber);
-                        isInList = true;
                     } else {
+                        System.out.printf("The index of %d is", userFindNumber);
                         for (int index = 0; index < userList.size(); index++) {
                             if (userFindNumber == userList.get(index)) {
-                                System.out.printf("The index of %d is %d.\n", userFindNumber, index);
+                                System.out.print("\t" + index);
                             }
                         }
                     }
+                    System.out.println();
                     createMenu();
                     break;
 
@@ -145,7 +146,6 @@ public class Lab_4_1 {
                         System.out.println("Please choose again!");
                         createMenu();
                     }
-
             }
         }
     }
@@ -183,9 +183,7 @@ public class Lab_4_1 {
     }
 
     private static int getUserNumber() {
-
         Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
-        return userInput;
+        return scanner.nextInt();
     }
 }

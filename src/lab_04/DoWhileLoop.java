@@ -18,6 +18,7 @@ public class DoWhileLoop {
             if (userNumber == randomNumber){
                 System.out.println("Great!");
                 break;
+
             } else if (userNumber > 10) {
                 System.out.println("Your number is greater than 10. Please input again.");
                 guessingTime--;
