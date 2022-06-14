@@ -10,7 +10,6 @@ public class EmployeeList {
         Employee fullTimeEmployee1 = new FullTimeEmployee();
         Employee fullTimeEmployee2 = new FullTimeEmployee();
         Employee fullTimeEmployee3 = new FullTimeEmployee();
-
         Employee contractor1 = new Contractor();
         Employee contractor2 = new Contractor();
         Employee contractor3 = new Contractor();
@@ -21,7 +20,6 @@ public class EmployeeList {
         contractor1.setEmployeeIdNum(1);
         contractor2.setEmployeeIdNum(2);
         contractor3.setEmployeeIdNum(3);
-
 
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(fullTimeEmployee1);

@@ -12,6 +12,6 @@ public class Contractor extends Employee {
         return "Contractor{" +
                 "Id Number= C" + getEmployeeIdNum() +
                 ", salary= " + salary() +
-                '}';
+                '}' + "\n";
     }
 }
