@@ -24,6 +24,7 @@ public class Lab_4_1 {
                 case 1: //add numbers into array list
                     System.out.print("Please add a number and your array list will be automatically created: ");
                     int userNumber = getUserNumber();
+
                     userList.add(userNumber);
                     for (int index = 0; index < userListSize; index++) {
                         userList.add(userNumber + index + 1);

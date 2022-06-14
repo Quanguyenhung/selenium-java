@@ -13,7 +13,7 @@ public class Lab_6_2_PasswordInput {
         System.out.print("Please input your password: ");
         while (incorrectTimeCount < incorrectTimeMax) {
             Scanner scanner = new Scanner(System.in);
-            String userInputPassword = scanner.next();
+            String userInputPassword = scanner.nextLine();
 
             if (myPassword.equals(userInputPassword)) {
                 System.out.println("Welcome back!");
