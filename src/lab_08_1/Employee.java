@@ -2,32 +2,33 @@ package lab_08_1;
 
 public class Employee {
 
-    private int employeeIdNum;
+    private String employeeId;
+    private long salary;
 
     public Employee() {
     }
 
-    public Employee(int employeeIdNum) {
-        this.employeeIdNum = employeeIdNum;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public int getEmployeeIdNum() {
-        return employeeIdNum;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public void setEmployeeIdNum(int employeeIdNum) {
-        this.employeeIdNum = employeeIdNum;
+    public long getSalary() {
+        return salary;
     }
 
-    public long salary() {
-        return 0;
+    public void setSalary(long salary) {
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "Employee Id Number= " + employeeIdNum +
-                ", salary= " + salary() +
+                "Employee Id= " + employeeId +
+                ", salary= $" + getSalary() +
                 '}';
     }
 }

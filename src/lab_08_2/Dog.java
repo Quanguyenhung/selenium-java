@@ -9,14 +9,14 @@ public class Dog extends Animal {
 
     @Override
     public int getMaxSpeed() {
-        return 3;
+        return 60;
     }
 
     @Override
     public String toString() {
         return "Animal{" +
                 "animalType='" + getAnimalType() + '\'' +
-                super.toString() + '\'' +
+                super.toString() +
                 ", maxSpeed=" + getMaxSpeed() +
                 '}';
     }

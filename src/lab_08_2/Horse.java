@@ -9,14 +9,14 @@ public class Horse extends Animal {
 
     @Override
     public int getMaxSpeed() {
-        return 1;
+        return 75;
     }
 
     @Override
     public String toString() {
         return "Animal{" +
                 "animalType='" + getAnimalType() + '\'' +
-                super.toString() + '\'' +
+                super.toString() +
                 ", maxSpeed=" + getMaxSpeed() +
                 '}' + "\n";
     }

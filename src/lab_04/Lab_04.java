@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Lab_4_1 {
+public class Lab_04 {
 
     public static void main(String[] args) {
 
         List<Integer> userList = new ArrayList<>();
-        createMenu();
+        int userListSize = 5;
+        int userOption;
+        boolean isContinueToPlay = true;
 
-        int userListSize = 10;
-        int userOption = 0;
-        boolean isContinue = true;
+        while (isContinueToPlay) {
 
-        while (userOption != 7) {
+            createMenu();
             System.out.print("Please choose an option: ");
             userOption = getUserNumber();
 
@@ -29,7 +29,6 @@ public class Lab_4_1 {
                     for (int index = 0; index < userListSize; index++) {
                         userList.add(userNumber + index + 1);
                     }
-                    createMenu();
                     break;
 
                 case 2: //print numbers
@@ -38,38 +37,30 @@ public class Lab_4_1 {
                         System.out.print(" " + userNumbers);
                     }
                     System.out.println();
-                    createMenu();
                     break;
 
                 case 3: //get max
                     if (userList.isEmpty()) {
                         System.out.println("Please add numbers to your array list!");
-                        createMenu();
-                        break;
                     }
                     int maxValue = getMax(userList);
                     System.out.printf("Maximum value is %d.\n", maxValue);
-                    createMenu();
                     break;
 
                 case 4: //get min
 
                     if (userList.size() == 0) {
                         System.out.println("Please add numbers to your array list!");
-                        createMenu();
-                        break;
                     }
                     int minValue = getMin(userList);
                     System.out.printf("Minimum value is %d.\n", minValue);
-                    createMenu();
                     break;
 
                 case 5: //search number index
                     if (userList.size() == 0) {
                         System.out.println("Please add numbers to your array list!");
-                        createMenu();
-                        break;
                     }
+
                     System.out.print("Please input the number you want to find: ");
                     int userFindNumber = getUserNumber();
                     boolean isInList = userList.contains(userFindNumber);
@@ -80,72 +71,36 @@ public class Lab_4_1 {
                         System.out.printf("The index of %d is", userFindNumber);
                         for (int index = 0; index < userList.size(); index++) {
                             if (userFindNumber == userList.get(index)) {
-                                System.out.print("\t" + index);
+                                System.out.print(" " + index);
                             }
                         }
                     }
                     System.out.println();
-                    createMenu();
                     break;
 
-                case 6: //reset
-
-                    while (isContinue) {
-                        System.out.println("Do you want to reset array list?");
-                        System.out.println("1.Yes");
-                        System.out.println("2.No");
-                        int reset = getUserNumber();
-
-                        switch (reset) {
-                            case 1:
-                                System.out.println("Your array list was reset.");
-                                isContinue = false;
-                                for (int index = 0; index < userList.size(); ) {
-                                    userList.remove(index);
-                                }
-                                createMenu();
-                                break;
-                            case 2:
-                                System.out.println("Your array will not be reset!");
-                                isContinue = false;
-                                createMenu();
-                                break;
-                            default:
-                                System.out.println("Please choose again!");
-                        }
-                    }
-                    isContinue = true;
-                    createMenu();
-                    break;
-
-                case 7: //exit
+                case 6: //exit
+                    boolean isContinue = true;
                     while (isContinue) {
                         System.out.println("Do you want to exit?");
                         System.out.println("1.Yes");
                         System.out.println("2.No");
-                        int reset = getUserNumber();
+                        int exitOption = getUserNumber();
 
-                        switch (reset) {
+                        switch (exitOption) {
                             case 1:
                                 System.out.println("See you again!");
                                 isContinue = false;
+                                isContinueToPlay = false;
                                 break;
+
                             case 2:
                                 System.out.println("Return to menu.");
                                 isContinue = false;
-                                userOption = 1;
-                                createMenu();
                                 break;
+
                             default:
                                 System.out.println("Please choose again!");
                         }
-                    }
-                    isContinue = true;
-
-                default:
-                    if (userOption > 7) {
-                        System.out.println("Please choose again!");
-                        createMenu();
                     }
             }
         }
@@ -179,8 +134,7 @@ public class Lab_4_1 {
         System.out.println("3. Get maximum number");
         System.out.println("4. Get minimum number");
         System.out.println("5. Search number index");
-        System.out.println("6. Reset array list");
-        System.out.println("7. Exit");
+        System.out.println("6. Exit");
     }
 
     private static int getUserNumber() {

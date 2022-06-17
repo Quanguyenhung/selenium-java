@@ -25,7 +25,6 @@ public class AnimalRacing {
 
         int maxSpeed = animalList.get(0).getSpeed();
         int indexMax1 = 0;
-        int indexMax2 = 0;
 
         for (int index = 0; index < animalList.size(); index++) {
             int speed = animalList.get(index).getSpeed();
@@ -35,6 +34,7 @@ public class AnimalRacing {
             }
         }
 
+        int indexMax2 = 0;
         for (int index = 0; index < animalList.size(); index++) {
             int speed = animalList.get(index).getSpeed();
             if (maxSpeed == speed) {

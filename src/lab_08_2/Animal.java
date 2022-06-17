@@ -1,7 +1,5 @@
 package lab_08_2;
 
-import java.security.SecureRandom;
-
 public abstract class Animal {
 
     private String animalType;
@@ -15,11 +13,6 @@ public abstract class Animal {
         this.animalType = animalType;
         this.speed = speed;
         this.maxSpeed = maxSpeed;
-    }
-
-    public Animal(String animalType, int randomSpeed) {
-        this.animalType = animalType;
-        this.speed = randomSpeed;
     }
 
     public String getAnimalType() {
@@ -40,10 +33,6 @@ public abstract class Animal {
 
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed ;
-    }
-
-    public int maxSpeed(){
-        return maxSpeed;
     }
 
     public void setSpeed(int speed) {

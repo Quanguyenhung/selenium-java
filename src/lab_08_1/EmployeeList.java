@@ -14,12 +14,12 @@ public class EmployeeList {
         Employee contractor2 = new Contractor();
         Employee contractor3 = new Contractor();
 
-        fullTimeEmployee1.setEmployeeIdNum(1);
-        fullTimeEmployee2.setEmployeeIdNum(2);
-        fullTimeEmployee3.setEmployeeIdNum(3);
-        contractor1.setEmployeeIdNum(1);
-        contractor2.setEmployeeIdNum(2);
-        contractor3.setEmployeeIdNum(3);
+        fullTimeEmployee1.setEmployeeId("01");
+        fullTimeEmployee2.setEmployeeId("02");
+        fullTimeEmployee3.setEmployeeId("03");
+        contractor1.setEmployeeId("01");
+        contractor2.setEmployeeId("02");
+        contractor3.setEmployeeId("03");
 
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(fullTimeEmployee1);
@@ -33,7 +33,7 @@ public class EmployeeList {
 
         long totalSalary = 0;
         for (Employee employee : employeeList) {
-            long salary = employee.salary();
+            long salary = employee.getSalary();
             totalSalary = totalSalary + salary;
         }
 
