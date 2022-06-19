@@ -12,9 +12,9 @@ public class AnimalRacing {
         Animal tiger = new Tiger();
         Animal dog = new Dog();
 
-        horse.setSpeed(randomSpeed(horse.getMaxSpeed()));
-        tiger.setSpeed(randomSpeed(tiger.getMaxSpeed()));
-        dog.setSpeed(randomSpeed(dog.getMaxSpeed()));
+        horse.setSpeed(randomSpeed(horse.getAnimalMaxSpeed()));
+        tiger.setSpeed(randomSpeed(tiger.getAnimalMaxSpeed()));
+        dog.setSpeed(randomSpeed(dog.getAnimalMaxSpeed()));
 
         List<Animal> animalList = new ArrayList<>();
         animalList.add(horse);

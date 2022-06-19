@@ -8,7 +8,7 @@ public class Horse extends Animal {
     }
 
     @Override
-    public int getMaxSpeed() {
+    public int getAnimalMaxSpeed() {
         return 75;
     }
 
@@ -17,7 +17,7 @@ public class Horse extends Animal {
         return "Animal{" +
                 "animalType='" + getAnimalType() + '\'' +
                 super.toString() +
-                ", maxSpeed=" + getMaxSpeed() +
+                ", maxSpeed=" + getAnimalMaxSpeed() +
                 '}' + "\n";
     }
 }

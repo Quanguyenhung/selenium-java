@@ -4,7 +4,7 @@ public abstract class Animal {
 
     private String animalType;
     private int speed;
-    private int maxSpeed;
+    private int animalMaxSpeed;
 
     public Animal() {
     }
@@ -12,7 +12,7 @@ public abstract class Animal {
     public Animal(String animalType, int speed, int maxSpeed) {
         this.animalType = animalType;
         this.speed = speed;
-        this.maxSpeed = maxSpeed;
+        this.animalMaxSpeed = maxSpeed;
     }
 
     public String getAnimalType() {
@@ -27,12 +27,12 @@ public abstract class Animal {
         return speed;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public int getAnimalMaxSpeed() {
+        return animalMaxSpeed;
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed ;
+    public void setAnimalMaxSpeed(int animalMaxSpeed) {
+        this.animalMaxSpeed = animalMaxSpeed;
     }
 
     public void setSpeed(int speed) {
