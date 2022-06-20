@@ -1,12 +1,14 @@
 package lab_09;
 
+import java.security.SecureRandom;
+
 public class AnimalWithBuilder {
 
     private String animalType;
     private int speed;
     private boolean canFly;
 
-    protected AnimalWithBuilder(AnimalBuilder builder){
+    protected AnimalWithBuilder(Builder builder){
         this.animalType = builder.animalType;
         this.speed = builder.speed;
         this.canFly = builder.canFly;
@@ -26,29 +28,30 @@ public class AnimalWithBuilder {
 
     @Override
     public String toString() {
-        return "AnimalWithBuilder{" +
-                "animalType='" + animalType + '\'' +
-                ", speed=" + speed +
-                ", canFly=" + canFly +
-                '}' + '\n';
+        return animalType + " with the speed of " + speed + "km/h";
     }
 
-    public static class AnimalBuilder {
+    //Inner class
+    public static class Builder {
 
         private String animalType;
         private int speed;
         private boolean canFly;
 
-        public void setAnimalType(String animalType) {
+        public Builder setAnimalType(String animalType) {
             this.animalType = animalType;
+            return this;
         }
 
-        public void setSpeed(int speed) {
+        public Builder setSpeed(int speed) {
             this.speed = speed;
+//            this.speed = new SecureRandom().nextInt(maxSpeed);
+            return this;
         }
 
-        public void setCanFly(boolean canFly) {
+        public Builder setCanFly(boolean canFly) {
             this.canFly = canFly;
+            return this;
         }
 
         public AnimalWithBuilder build() {
