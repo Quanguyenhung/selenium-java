@@ -28,7 +28,11 @@ public class AnimalWithBuilder {
 
     @Override
     public String toString() {
-        return animalType + " with the speed of " + speed + "km/h";
+        return "AnimalWithBuilder{" +
+                "animalType='" + animalType + '\'' +
+                ", speed=" + speed +
+                ", canFly=" + canFly +
+                '}' + '\n';
     }
 
     //Inner class
@@ -45,9 +49,13 @@ public class AnimalWithBuilder {
 
         public Builder setSpeed(int speed) {
             this.speed = speed;
-//            this.speed = new SecureRandom().nextInt(maxSpeed);
             return this;
         }
+
+//        public Builder setSpeed(int maxSpeed) {
+//            this.speed = new SecureRandom().nextInt(maxSpeed);
+//            return this;
+//        }
 
         public Builder setCanFly(boolean canFly) {
             this.canFly = canFly;

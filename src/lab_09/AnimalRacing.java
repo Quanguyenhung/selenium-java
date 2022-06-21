@@ -43,21 +43,14 @@ public class AnimalRacing {
         animalWithBuilderList.add(falcon);
         animalWithBuilderList.add(lion);
 
-        //Remove animals that can fly.
-        for (int index = 0; index < animalWithBuilderList.size(); index++) {
-            boolean canFly = animalWithBuilderList.get(index).isCanFly();
-            if (canFly) {
-                animalWithBuilderList.remove(index);
-                index--;
-            }
-        }
-
         System.out.println(animalWithBuilderList);
+        List<AnimalWithBuilder> racingList = removeFlyableAnimal(animalWithBuilderList);
+        System.out.println(racingList);
 
-        findFastestAnimal(animalWithBuilderList);
+        findFastestAnimal(racingList);
     }
 
-    private static int findMaxSpeed (List<AnimalWithBuilder> animalList) {
+    private static int findMaxSpeed(List<AnimalWithBuilder> animalList) {
         int maxSpeed = animalList.get(0).getSpeed();
         for (AnimalWithBuilder animalWithBuilder : animalList) {
             int speed = animalWithBuilder.getSpeed();
@@ -69,7 +62,19 @@ public class AnimalRacing {
         return maxSpeed;
     }
 
-    private static void findFastestAnimal (List<AnimalWithBuilder> animalList){
+    private static List<AnimalWithBuilder> removeFlyableAnimal(List<AnimalWithBuilder> animalWithBuilderList) {
+        for (int index = 0; index < animalWithBuilderList.size(); index++) {
+            boolean canFly = animalWithBuilderList.get(index).isCanFly();
+            if (canFly) {
+                animalWithBuilderList.remove(index);
+                index--;
+            }
+        }
+
+        return animalWithBuilderList;
+    }
+
+    private static void findFastestAnimal(List<AnimalWithBuilder> animalList) {
 
         int maxSpeed = findMaxSpeed(animalList);
 
@@ -82,9 +87,14 @@ public class AnimalRacing {
         }
 
         if (animalList.size() > 1) {
-            System.out.print("The winners are " + animalList);
+            System.out.print("The winners are ");
+            for (AnimalWithBuilder animal : animalList) {
+                System.out.print(animal.getAnimalType() + ", ");
+            }
+            System.out.printf("with the speed of %dkm/k.", maxSpeed);
         } else {
-            System.out.println("The winner is " + animalList);
+            System.out.println("The winner is " + animalList.get(0).getAnimalType() +
+                    " with the speed of " + maxSpeed + "km/k.");
         }
     }
 }

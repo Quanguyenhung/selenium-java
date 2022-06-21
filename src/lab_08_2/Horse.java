@@ -1,15 +1,22 @@
 package lab_08_2;
 
+import java.security.SecureRandom;
+
 public class Horse extends Animal {
 
     @Override
     public String getAnimalType() {
-        return "Horse";
+        String animalName = super.getAnimalType();
+        if (animalName == null) {
+            return "Horse";
+        } else {
+            return "Horse" + animalName;
+        }
     }
 
     @Override
-    public int getAnimalMaxSpeed() {
-        return 75;
+    public int getMaxSpeed() {
+        return 70;
     }
 
     @Override
@@ -17,7 +24,6 @@ public class Horse extends Animal {
         return "Animal{" +
                 "animalType='" + getAnimalType() + '\'' +
                 super.toString() +
-                ", maxSpeed=" + getAnimalMaxSpeed() +
-                '}' + "\n";
+                '}'+ '\n';
     }
 }
