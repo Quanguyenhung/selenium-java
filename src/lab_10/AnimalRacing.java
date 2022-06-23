@@ -1,4 +1,4 @@
-package lab_08_2;
+package lab_10;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,7 @@ public class AnimalRacing {
         findFastestAnimal(animalList);
     }
 
+    //Controllers
     private static int findMaxSpeed(List<Animal> animalList) {
         int maxSpeed = animalList.get(0).speed();
         for (Animal animal : animalList) {

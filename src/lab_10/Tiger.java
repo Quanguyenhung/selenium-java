@@ -1,20 +1,20 @@
-package lab_08_2;
+package lab_10;
 
 import java.security.SecureRandom;
 
-public class Horse extends Animal {
+public class Tiger extends Animal {
 
     @Override
     public String getAnimalType() {
         String animalName = super.getAnimalType();
         if (animalName == null) {
-            return "Horse";
+            return "Tiger";
         } else {
-            return "Horse" + animalName;
+            return "Tiger" + animalName;
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(50);
+    int randomSpeed = new SecureRandom().nextInt(20);
     @Override
     public int speed() {
         return randomSpeed;

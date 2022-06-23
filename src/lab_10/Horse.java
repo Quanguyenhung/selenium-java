@@ -1,4 +1,4 @@
-package lab_08_2;
+package lab_10;
 
 import java.security.SecureRandom;
 
@@ -14,7 +14,7 @@ public class Horse extends Animal {
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(50);
+    int randomSpeed = new SecureRandom().nextInt(60);
     @Override
     public int speed() {
         return randomSpeed;

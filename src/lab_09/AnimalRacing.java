@@ -11,45 +11,27 @@ public class AnimalRacing {
 
         Builder animal = new Builder();
 
-        AnimalWithBuilder eagle = animal
-                .setAnimalType("Eagle")
-                .setSpeed(50)
-                .setCanFly(true).build();
+        AnimalWithBuilder eagle = animal.setAnimalType("Eagle").setSpeed(50).setCanFly(true).build();
+        AnimalWithBuilder falcon = animal.setAnimalType("Falcon").setSpeed(60).setCanFly(true).build();
+        AnimalWithBuilder cat = animal.setAnimalType("Cat").setSpeed(30).setCanFly(false).build();
+        AnimalWithBuilder snake = animal.setAnimalType("Snake").setSpeed(30).setCanFly(false).build();
+        AnimalWithBuilder lion = animal.setAnimalType("Lion").setSpeed(20).setCanFly(false).build();
 
-        AnimalWithBuilder falcon = animal
-                .setAnimalType("Falcon")
-                .setSpeed(60)
-                .setCanFly(true).build();
+        List<AnimalWithBuilder> animalList = new ArrayList<>();
+        animalList.add(eagle);
+        animalList.add(cat);
+        animalList.add(snake);
+        animalList.add(falcon);
+        animalList.add(lion);
 
-        AnimalWithBuilder cat = animal
-                .setAnimalType("Cat")
-                .setSpeed(30)
-                .setCanFly(false).build();
-
-        AnimalWithBuilder snake = animal
-                .setAnimalType("Snake")
-                .setSpeed(30)
-                .setCanFly(false).build();
-
-        AnimalWithBuilder lion = animal
-                .setAnimalType("Lion")
-                .setSpeed(20)
-                .setCanFly(false).build();
-
-        List<AnimalWithBuilder> animalWithBuilderList = new ArrayList<>();
-        animalWithBuilderList.add(eagle);
-        animalWithBuilderList.add(cat);
-        animalWithBuilderList.add(snake);
-        animalWithBuilderList.add(falcon);
-        animalWithBuilderList.add(lion);
-
-        System.out.println(animalWithBuilderList);
-        List<AnimalWithBuilder> racingList = removeFlyableAnimal(animalWithBuilderList);
+        System.out.println(animalList);
+        List<AnimalWithBuilder> racingList = removeCanFlyAnimal(animalList);
         System.out.println(racingList);
 
         findFastestAnimal(racingList);
     }
 
+    //Controllers
     private static int findMaxSpeed(List<AnimalWithBuilder> animalList) {
         int maxSpeed = animalList.get(0).getSpeed();
         for (AnimalWithBuilder animalWithBuilder : animalList) {
@@ -58,11 +40,10 @@ public class AnimalRacing {
                 maxSpeed = speed;
             }
         }
-
         return maxSpeed;
     }
 
-    private static List<AnimalWithBuilder> removeFlyableAnimal(List<AnimalWithBuilder> animalWithBuilderList) {
+    private static List<AnimalWithBuilder> removeCanFlyAnimal(List<AnimalWithBuilder> animalWithBuilderList) {
         for (int index = 0; index < animalWithBuilderList.size(); index++) {
             boolean canFly = animalWithBuilderList.get(index).isCanFly();
             if (canFly) {
@@ -70,7 +51,6 @@ public class AnimalRacing {
                 index--;
             }
         }
-
         return animalWithBuilderList;
     }
 

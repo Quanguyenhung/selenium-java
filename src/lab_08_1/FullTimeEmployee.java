@@ -2,6 +2,10 @@ package lab_08_1;
 
 public class FullTimeEmployee extends Employee {
 
+    public FullTimeEmployee(String employeeId) {
+        super(employeeId);
+    }
+
     @Override
     public long getSalary() {
         return 20;

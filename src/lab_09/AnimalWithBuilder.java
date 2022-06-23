@@ -47,15 +47,17 @@ public class AnimalWithBuilder {
             return this;
         }
 
-        public Builder setSpeed(int speed) {
-            this.speed = speed;
-            return this;
-        }
-
-//        public Builder setSpeed(int maxSpeed) {
-//            this.speed = new SecureRandom().nextInt(maxSpeed);
+        //Set speed yourself
+//        public Builder setSpeed(int speed) {
+//            this.speed = speed;
 //            return this;
 //        }
+
+        //Set random speed
+        public Builder setSpeed(int maxSpeed) {
+            this.speed = new SecureRandom().nextInt(maxSpeed);
+            return this;
+        }
 
         public Builder setCanFly(boolean canFly) {
             this.canFly = canFly;

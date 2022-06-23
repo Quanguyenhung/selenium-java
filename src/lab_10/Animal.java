@@ -1,9 +1,9 @@
-package lab_08_2;
+package lab_10;
 
-public class Animal {
+public abstract class Animal {
 
     private String animalType;
-    private int speed;
+    public abstract int speed();
 
     public void setAnimalType(String animalType) {
         this.animalType = animalType;
@@ -11,9 +11,5 @@ public class Animal {
 
     public String getAnimalType() {
         return animalType;
-    }
-
-    public int speed(){
-        return speed;
     }
 }

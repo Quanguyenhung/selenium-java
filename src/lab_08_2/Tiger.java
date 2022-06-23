@@ -14,16 +14,15 @@ public class Tiger extends Animal {
         }
     }
 
+    int randomSpeed = new SecureRandom().nextInt(50);
     @Override
-    public int getMaxSpeed() {
-        return 60;
+    public int speed() {
+        return randomSpeed;
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "animalType='" + getAnimalType() + '\'' +
-                super.toString() +
-                '}'+ '\n';
+        return "{" + "animalType='" + getAnimalType() + '\'' +
+                " ,speed=" + speed() + '}'+ '\n';
     }
 }

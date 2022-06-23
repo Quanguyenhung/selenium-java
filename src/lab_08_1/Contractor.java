@@ -2,6 +2,10 @@ package lab_08_1;
 
 public class Contractor extends Employee {
 
+    public Contractor(String employeeId) {
+        super(employeeId);
+    }
+
     @Override
     public long getSalary() {
         return 10;
