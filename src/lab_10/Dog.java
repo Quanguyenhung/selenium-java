@@ -14,7 +14,8 @@ public class Dog extends Animal {
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(50);
+    int animalMaxSpeed = 50;
+    int randomSpeed = new SecureRandom().nextInt(animalMaxSpeed);
     @Override
     public int speed() {
         return randomSpeed;
@@ -23,6 +24,6 @@ public class Dog extends Animal {
     @Override
     public String toString() {
         return "{" + "animalType='" + getAnimalType() + '\'' +
-                " ,speed=" + speed() + '}'+ '\n';
+                " ,speed=" + speed() + '}' + '\n';
     }
 }

@@ -27,9 +27,9 @@ public class AnimalRacing {
     }
 
     private static int findMaxSpeed(List<Animal> animalList) {
-        int maxSpeed = animalList.get(0).speed();
+        int maxSpeed = animalList.get(0).getSpeed();
         for (Animal animal : animalList) {
-            int speed = animal.speed();
+            int speed = animal.getSpeed();
             if (maxSpeed < speed) {
                 maxSpeed = speed;
             }
@@ -43,7 +43,7 @@ public class AnimalRacing {
 
         //Remove animals that don't run with max speed from animalList
         for (int index = 0; index < animalList.size(); index++) {
-            int speed = animalList.get(index).speed();
+            int speed = animalList.get(index).getSpeed();
             if (maxSpeed != speed) {
                 animalList.remove(index);
                 index--;

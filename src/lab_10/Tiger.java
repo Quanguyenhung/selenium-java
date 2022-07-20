@@ -14,7 +14,8 @@ public class Tiger extends Animal {
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(20);
+    int animalMaxSpeed = 80;
+    int randomSpeed = new SecureRandom().nextInt(animalMaxSpeed);
     @Override
     public int speed() {
         return randomSpeed;

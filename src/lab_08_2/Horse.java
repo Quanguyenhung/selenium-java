@@ -14,15 +14,16 @@ public class Horse extends Animal {
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(50);
+    int animalMaxSpeed = 50;
+    int randomSpeed = super.setSpeed(animalMaxSpeed);
     @Override
-    public int speed() {
+    public int getSpeed() {
         return randomSpeed;
     }
 
     @Override
     public String toString() {
         return "{" + "animalType='" + getAnimalType() + '\'' +
-                " ,speed=" + speed() + '}'+ '\n';
+                " ,speed=" + getSpeed() + '}'+ '\n';
     }
 }

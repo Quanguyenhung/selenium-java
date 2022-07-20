@@ -14,7 +14,8 @@ public class Horse extends Animal {
         }
     }
 
-    int randomSpeed = new SecureRandom().nextInt(60);
+    int animalMaxSpeed = 75;
+    int randomSpeed = new SecureRandom().nextInt(animalMaxSpeed);
     @Override
     public int speed() {
         return randomSpeed;

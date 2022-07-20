@@ -1,5 +1,7 @@
 package lab_08_2;
 
+import java.security.SecureRandom;
+
 public class Animal {
 
     private String animalType;
@@ -13,7 +15,12 @@ public class Animal {
         return animalType;
     }
 
-    public int speed(){
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int setSpeed(int maxSpeed) {
+        this.speed = new SecureRandom().nextInt(maxSpeed);
         return speed;
     }
 }
